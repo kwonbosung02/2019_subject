@@ -7,11 +7,17 @@ def onclick(event):
     global ix, iy
     try:
         ix, iy = event.xdata, event.ydata
-        print ('x = %.2f, y = %.2f'%(ix, iy))
-
+        ix = round(ix,2)
+        iy = round(iy,2)
+        #print ('x = %.2f, y = %.2f'%(ix, iy))
+        print('='*30)
+        print('sin'+str(ix)+" : "+ str(round(np.sin(ix),2)))
+        print('cos'+str(ix)+" : "+ str(round(np.cos(ix),2)))
+        print('tan'+str(ix)+" : "+ str(round(np.tan(ix),2)))
+  
         global coords
         coords = [ix, iy]
-
+        
         return coords
     except:
         pass
